@@ -19,8 +19,14 @@
         xs.capacity = 0;\
     } while (0)
 
-//TODO: Implement GTA (Generic Type Array)
+/* Generic Type */
+#define Vector(type) typedef struct {\
+    type* items;\
+    size_t count;\
+    size_t capacity;\
+} Vector_##type;
 
+/* Static Type */
 typedef struct {
     int* items;
     size_t count;
